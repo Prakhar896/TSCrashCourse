@@ -1,21 +1,16 @@
 import React from 'react'
 
-type Color = "red" | "blue" | "orange"
-
 type ButtonProps = {
-    backgroundColour: Color,
-    fontSize?: number,
-    padding: [number, number, number, number]
+    style: {
+        backgroundColor: string;
+        fontSize: number;
+        textColor: string;
+    }
 }
 
-function MyButton(
-    { backgroundColour, fontSize=40, padding }:
-    ButtonProps
-) {
+function MyButton({ style }: ButtonProps) {
     return (
-        <div style={{ backgroundColor: backgroundColour, fontSize: fontSize, padding: padding.join('px ') + 'px' }}>
-            <button>My Button</button>
-        </div>
+        <button style={style}>My Button</button>
     )
 }
 
