@@ -7,7 +7,9 @@ function App() {
         <MyButton style={{
             backgroundColor: 'blue',
             fontSize: 16,
-            textColor: 'blue'
+            color: 'blue',
+            padding: '10px',
+            borderRadius: '10px'
         }} />
     );
 }

@@ -1,11 +1,7 @@
 import React from 'react'
 
 type ButtonProps = {
-    style: {
-        backgroundColor: string;
-        fontSize: number;
-        textColor: string;
-    }
+    style: React.CSSProperties;
 }
 
 function MyButton({ style }: ButtonProps) {
