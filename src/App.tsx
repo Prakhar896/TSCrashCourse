@@ -14,7 +14,6 @@ function App() {
     return (
         <div>
             <Person name={"Pedro"} age={22} isMarried={false} />
-            <Person name={"John"} age={32} isMarried={true} />
         </div>
     );
 }
