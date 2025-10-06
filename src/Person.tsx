@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export interface PersonProps {
     name: string;
     age: number;
@@ -5,15 +7,15 @@ export interface PersonProps {
 }
 
 export const Person = (props: PersonProps) => {
-    const fetchUser = () => {
-        return { name: "Pedro", age: 22, isMarried: null }
-    }
+    const [isShowInfo, setShowInfo] = useState<boolean | null>(false);
 
     return (
         <div>
-            <p>Name: {props.name}</p>
-            <p>Age: {props.age}</p>
-            <p>Married: {props.isMarried ? "Yes" : "No"}</p>
+            {isShowInfo && <>
+                <p>Name: {props.name}</p>
+                <p>Age: {props.age}</p>
+                <p>Married: {props.isMarried ? "Yes" : "No"}</p>
+            </>}
         </div>
     )
 }
