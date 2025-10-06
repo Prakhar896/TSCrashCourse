@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css'
-import { Person } from './Person';
+import { Countries, Person } from './Person';
 
 let name: string = "Pedro";
 let age: number = 30;
@@ -13,7 +13,7 @@ let person: any = 3;
 function App() {
     return (
         <div>
-            <Person name={"Pedro"} age={22} isMarried={false} />
+            <Person name={"Pedro"} age={22} isMarried={false} country={Countries.India} />
         </div>
     );
 }
